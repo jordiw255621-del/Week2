@@ -39,12 +39,18 @@ class Assessment {
         this.fudgeMark = -penalty;
     }
 
-    // test the computeGrade method
+    void penalise(Grade newGrade) {
+
+    }
+
     class TestAssessment {
         public static void main(String[] args) {
-            Assessment assessment = new Assessment("Final exam", 30, 60, 0);
-            assessment.penalise(-30);
+            Assessment assessment = new Assessment("Final exam", 35, 60, 0); // this means Final exam has a mark of 30
+                                                                             // out of 60 and the 0 fudge mark
+            assessment.penalise(5);
             System.out.println(assessment.computeGrade());
+
         }
+
     }
 }
