@@ -1,3 +1,6 @@
+// ASK COPILOT TO HELP GUIDE MAKING THIS CODE 
+
+
 // // these are the instructions for this whole program
 // // Create a Grade enumeration, representing the possible grades you can
 // attain for assessments and courses at UTS College.
@@ -35,42 +38,3 @@
 // Add an overloaded method void addAssessment(String name, Grade grade).
 // Test the code
 
-package Assessment1.java;
-
-import java.util.ArrayList;
-
-public class Assessment {
-    String name;
-    int mark;
-    int totalPossibleMarks;
-    int fudgeMark;
-
-    public Assessment(String name, int mark, int totalPossibleMarks) {
-        this.name = name;
-        this.mark = mark;
-        this.totalPossibleMarks = totalPossibleMarks;
-        this.fudgeMark = 0;
-    }
-
-    public void addAssessment(String name, int mark, int totalPossibleMarks) {
-        if (this.name.equals(name)) {
-            System.out.println("An assessment with the name " + name + " already exists.");
-        } else {
-            this.name = name;
-            this.mark = mark;
-            this.totalPossibleMarks = totalPossibleMarks;
-            this.fudgeMark = 0;
-        }
-    }
-
-    public void addAssessment(String name, Grade grade) {
-        if (this.name.equals(name)) {
-            System.out.println("An assessment with the name " + name + " already exists.");
-        } else {
-            this.name = name;
-            this.mark = grade.ordinal() * 10;
-            this.totalPossibleMarks = 100;
-            this.fudgeMark = 0;
-        }
-    }
-}
